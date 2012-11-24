@@ -3,6 +3,9 @@ package com.flyingh.demo;
 import static org.junit.Assert.assertNotSame;
 import static org.junit.Assert.assertSame;
 
+import java.beans.IntrospectionException;
+import java.beans.Introspector;
+import java.beans.PropertyDescriptor;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
@@ -28,6 +31,16 @@ public class Demo {
 	@Before
 	public void setUp() throws Exception {
 		ctx = new ClassPathXmlApplicationContext("beans.xml");
+	}
+
+	@Test
+	public void test7() throws IntrospectionException {
+		PropertyDescriptor[] pds = Introspector.getBeanInfo(User.class)
+				.getPropertyDescriptors();
+		for (PropertyDescriptor pd : pds) {
+			System.out.println(pd.getName());
+		}
+		System.out.println(pds.length);
 	}
 
 	@Test

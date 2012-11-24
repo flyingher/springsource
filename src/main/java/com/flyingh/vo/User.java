@@ -40,4 +40,9 @@ public class User {
 		this.password = password;
 	}
 
+	public void setInfo(String name, String password) {
+		this.name = name;
+		this.password = password;
+	}
+
 }
