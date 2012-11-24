@@ -44,6 +44,10 @@ public class Demo2 {
 		for (Entry<Object, Object> me : user.getProperties().entrySet()) {
 			System.out.println(me.getKey() + "--->" + me.getValue());
 		}
+		System.out.println("*******Array*******");
+		for (String str : user.getStrs()) {
+			System.out.println(str);
+		}
 	}
 
 	@Test

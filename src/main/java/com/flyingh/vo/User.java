@@ -15,6 +15,7 @@ public class User {
 	private Set<Integer> set;
 	private Map<String, Integer> map;
 	private Properties properties;
+	private String[] strs;
 
 	public User() {
 		super();
@@ -89,6 +90,14 @@ public class User {
 
 	public void setProperties(Properties properties) {
 		this.properties = properties;
+	}
+
+	public String[] getStrs() {
+		return strs;
+	}
+
+	public void setStrs(String[] strs) {
+		this.strs = strs;
 	}
 
 	public void setInfo(String name, String password) {
