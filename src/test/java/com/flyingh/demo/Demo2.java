@@ -1,5 +1,8 @@
 package com.flyingh.demo;
 
+import java.util.Map;
+import java.util.Map.Entry;
+
 import javax.swing.JFrame;
 
 import org.junit.After;
@@ -21,12 +24,33 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
-	
+
 	@Test
-	public void test2(){
-		User user = ctx.getBean("user",User.class);
+	public void test3() {
+		User user = ctx.getBean("user", User.class);
+		System.out.println("*******List*******");
+		for (String str : user.getList()) {
+			System.out.println(str);
+		}
+		System.out.println("*******Set*******");
+		for (Integer integer : user.getSet()) {
+			System.out.println(integer);
+		}
+		System.out.println("*******Map*******");
+		for (Map.Entry<String, Integer> me : user.getMap().entrySet()) {
+			System.out.println(me.getKey() + "-->" + me.getValue());
+		}
+		System.out.println("*******Properties*******");
+		for (Entry<Object, Object> me : user.getProperties().entrySet()) {
+			System.out.println(me.getKey() + "--->" + me.getValue());
+		}
+	}
+
+	@Test
+	public void test2() {
+		User user = ctx.getBean("user", User.class);
 		System.out.println(user);
-		System.out.println(user.getName()+"-->"+user.getBirthday());
+		System.out.println(user.getName() + "-->" + user.getBirthday());
 	}
 
 	@Test

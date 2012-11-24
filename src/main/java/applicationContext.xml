@@ -9,5 +9,34 @@
 		<constructor-arg value="300"></constructor-arg>
 	</bean>
 	<bean id="user" class="com.flyingh.vo.User" p:name="flyingh"
-		p:birthday="2012/11/24"></bean>
+		p:birthday="2012/11/24">
+		<property name="list">
+			<list>
+				<value>a</value>
+				<value>b</value>
+				<value>c</value>
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>1</value>
+				<value>2</value>
+				<value>3</value>
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="a" value="1"></entry>
+				<entry key="b" value="2"></entry>
+				<entry key="c" value="3"></entry>
+			</map>
+		</property>
+		<property name="properties">
+			<props>
+				<prop key="d">4</prop>
+				<prop key="e">5</prop>
+				<prop key="f">6</prop>
+			</props>
+		</property>
+	</bean>
 </beans>
