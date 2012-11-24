@@ -22,6 +22,10 @@ public class Demo {
 				Locale.getDefault()));
 		System.out.println(ctx.getMessage("info", new String[] { "飞天" },
 				Locale.CHINA));
+		System.out.println(ctx.getMessage("msg", new String[] { "I", "you" },
+				Locale.US));
+		System.out.println(ctx.getMessage("msg", new String[] { "我", "你" },
+				Locale.CHINA));
 	}
 
 	@Test
