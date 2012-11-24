@@ -19,7 +19,7 @@
 		<!-- <property name="score" value="100"></property> -->
 	</bean>
 	<bean id="system" class="java.lang.System"></bean>
-	<bean id="messageResource"
+	<bean id="messageSource"
 		class="org.springframework.context.support.ResourceBundleMessageSource">
 		<property name="basenames">
 			<list>
