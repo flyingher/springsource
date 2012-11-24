@@ -14,6 +14,12 @@ import com.flyingh.vo.Worker;
 @SuppressWarnings("deprecation")
 public class Demo {
 	@Test
+	public void test3(){
+		System.out.println(System.lineSeparator().length());
+		System.out.println(new ClassPathXmlApplicationContext("beans.xml").getBean("system",System.class));
+	}
+	
+	@Test
 	public void test2() {
 		new XmlBeanFactory(new ClassPathResource("beans.xml"));
 		System.out.println("*************");

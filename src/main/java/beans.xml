@@ -18,4 +18,5 @@
 		<constructor-arg value="150"></constructor-arg>
 		<!-- <property name="score" value="100"></property> -->
 	</bean>
+	<bean id="system" class="java.lang.System"></bean>
 </beans>
