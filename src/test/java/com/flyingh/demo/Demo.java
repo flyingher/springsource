@@ -12,8 +12,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.Assert;
+import static org.junit.Assert.*;
 
 import com.flyingh.vo.Student;
+import com.flyingh.vo.User;
 import com.flyingh.vo.Worker;
 
 @SuppressWarnings("deprecation")
@@ -23,6 +25,15 @@ public class Demo {
 	@Before
 	public void setUp() throws Exception {
 		ctx = new ClassPathXmlApplicationContext("beans.xml");
+	}
+
+	@Test
+	public void test6() {
+		User user1 = ctx.getBean("user", User.class);
+		User user2 = ctx.getBean("/user", User.class);
+		User user3 = ctx.getBean("uu", User.class);
+		assertSame(user1, user2);
+		assertSame(user2, user3);
 	}
 
 	@Test

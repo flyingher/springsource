@@ -27,4 +27,6 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="user" name="/user" class="com.flyingh.vo.User"></bean>
+	<alias name="user" alias="uu" />
 </beans>
