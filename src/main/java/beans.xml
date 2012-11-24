@@ -11,10 +11,11 @@
 		<property name="name" value="flyingh"></property>
 		<property name="age" value="22"></property>
 	</bean>
-	<bean id="student" class="com.flyingh.vo.Student" parent="person">
-		<property name="score" value="100"></property>
-	</bean>
-	<bean id="worker" class="com.flyingh.vo.Worker">
+	<bean id="worker" class="com.flyingh.vo.Worker" parent="person">
 		<property name="salary" value="8888"></property>
+	</bean>
+	<bean id="student" class="com.flyingh.vo.Student" parent="person">
+		<constructor-arg value="150"></constructor-arg>
+		<!-- <property name="score" value="100"></property> -->
 	</bean>
 </beans>

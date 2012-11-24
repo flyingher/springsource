@@ -8,6 +8,12 @@ public class Student extends Person {
 		System.out.println("Student.Student()");
 	}
 
+	public Student(float score) {
+		super();
+		this.score = score;
+		System.out.println("2:Student.Student()");
+	}
+
 	public float getScore() {
 		return score;
 	}
