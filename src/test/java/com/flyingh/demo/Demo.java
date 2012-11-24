@@ -9,6 +9,7 @@ import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.Assert;
 
 import com.flyingh.vo.Student;
+import com.flyingh.vo.Worker;
 
 @SuppressWarnings("deprecation")
 public class Demo {
@@ -19,6 +20,7 @@ public class Demo {
 		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(
 				"beans.xml");
 		System.out.println(ctx.getBean("student", Student.class));
+		System.out.println(ctx.getBean("worker", Worker.class));
 	}
 
 	@Test
