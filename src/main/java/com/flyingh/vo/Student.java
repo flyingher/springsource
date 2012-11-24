@@ -14,6 +14,10 @@ public class Student extends Person {
 		System.out.println("2:Student.Student()");
 	}
 
+	public Student(String name) {
+		System.out.println("3:Student.Student()");
+	}
+
 	public float getScore() {
 		return score;
 	}
