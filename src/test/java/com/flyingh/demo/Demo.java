@@ -1,8 +1,12 @@
 package com.flyingh.demo;
 
+import static org.junit.Assert.assertNotSame;
+import static org.junit.Assert.assertSame;
+
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.Date;
 import java.util.Locale;
 
 import org.junit.Before;
@@ -12,7 +16,6 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.util.Assert;
-import static org.junit.Assert.*;
 
 import com.flyingh.vo.Student;
 import com.flyingh.vo.User;
@@ -28,12 +31,18 @@ public class Demo {
 	}
 
 	@Test
-	public void test6() {
+	public void test6() throws Exception {
 		User user1 = ctx.getBean("user", User.class);
 		User user2 = ctx.getBean("/user", User.class);
 		User user3 = ctx.getBean("uu", User.class);
 		assertSame(user1, user2);
 		assertSame(user2, user3);
+		Date date1 = ctx.getBean("date", Date.class);
+		Thread.sleep(1000);
+		Date date2 = ctx.getBean("date", Date.class);
+		assertNotSame(date1, date2);
+		System.out.println(date1);
+		System.out.println(date2);
 	}
 
 	@Test
