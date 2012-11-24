@@ -27,7 +27,11 @@ public class Demo {
 
 	@Test
 	public void test5() throws IOException {
-		InputStream is = ctx.getResource("info.log").getInputStream();
+		// InputStream is = ctx.getResource("info.log").getInputStream();
+		// InputStream is =
+		// ctx.getResource("classpath:info.log").getInputStream();
+		InputStream is = ctx.getResource("http://www.springsource.org")
+				.getInputStream();
 		byte[] b = new byte[1024];
 		int len = 0;
 		ByteArrayOutputStream os = new ByteArrayOutputStream();
