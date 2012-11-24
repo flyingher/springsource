@@ -16,4 +16,9 @@ public class Worker extends Person {
 		this.salary = salary;
 	}
 
+	@Override
+	public String toString() {
+		return super.toString() + "Worker [salary=" + salary + "]";
+	}
+
 }
