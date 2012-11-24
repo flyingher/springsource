@@ -11,7 +11,8 @@
 		<property name="name" value="flyingh"></property>
 		<property name="age" value="22"></property>
 	</bean>
-	<bean id="worker" class="com.flyingh.vo.Worker" parent="person">
+	<bean id="worker" class="com.flyingh.vo.Worker" parent="person"
+		scope="prototype">
 		<property name="salary" value="8888"></property>
 	</bean>
 	<bean id="student" class="com.flyingh.vo.Student" parent="person">
