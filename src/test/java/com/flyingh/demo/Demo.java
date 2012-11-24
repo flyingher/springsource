@@ -20,6 +20,8 @@ public class Demo {
 				"beans.xml");
 		System.out.println(ctx.getMessage("info", new String[] { "flyingh" },
 				Locale.getDefault()));
+		System.out.println(ctx.getMessage("info", new String[] { "飞天" },
+				Locale.CHINA));
 	}
 
 	@Test
