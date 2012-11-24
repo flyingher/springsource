@@ -8,4 +8,6 @@
 		<constructor-arg value="500"></constructor-arg>
 		<constructor-arg value="300"></constructor-arg>
 	</bean>
+	<bean id="user" class="com.flyingh.vo.User" p:name="flyingh"
+		p:birthday="2012/11/24"></bean>
 </beans>

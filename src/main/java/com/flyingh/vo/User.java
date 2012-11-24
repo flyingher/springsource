@@ -1,9 +1,12 @@
 package com.flyingh.vo;
 
+import java.util.Date;
+
 public class User {
 	private int id;
 	private String name;
 	private String password;
+	private Date birthday;
 
 	public User() {
 		super();
@@ -38,6 +41,14 @@ public class User {
 
 	public void setPassword(String password) {
 		this.password = password;
+	}
+
+	public Date getBirthday() {
+		return birthday;
+	}
+
+	public void setBirthday(Date birthday) {
+		this.birthday = birthday;
 	}
 
 	public void setInfo(String name, String password) {
