@@ -1,6 +1,7 @@
 package com.flyingh.demo;
 
 import java.io.InputStream;
+import java.util.Locale;
 
 import org.junit.Test;
 import org.springframework.beans.factory.xml.XmlBeanFactory;
@@ -13,6 +14,14 @@ import com.flyingh.vo.Worker;
 
 @SuppressWarnings("deprecation")
 public class Demo {
+	@Test
+	public void test4() {
+		ClassPathXmlApplicationContext ctx = new ClassPathXmlApplicationContext(
+				"beans.xml");
+		System.out.println(ctx.getMessage("info", new String[] { "flyingh" },
+				Locale.getDefault()));
+	}
+
 	@Test
 	public void test3() {
 		System.out.println(System.lineSeparator().length());
