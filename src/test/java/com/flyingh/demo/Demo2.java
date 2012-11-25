@@ -14,6 +14,7 @@ import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.flyingh.bean.FieldFactoryBean;
 import com.flyingh.vo.User;
 
 public class Demo2 {
@@ -35,6 +36,7 @@ public class Demo2 {
 		out.println("hello world!!!");
 		String str = ctx.getBean("ffb", String.class);
 		System.out.println(str);
+		System.out.println(ctx.getBean("&ffb", FieldFactoryBean.class));
 	}
 
 	@Test
