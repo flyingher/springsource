@@ -72,4 +72,9 @@
 		<lookup-method name="newDog" bean="dog" />
 	</bean>
 	<bean id="dog" class="com.flyingh.vo.Dog" scope="prototype"></bean>
+	<bean id="owner" class="com.flyingh.vo.Owner" p:cat-ref="cat"></bean>
+	<bean id="cat" class="com.flyingh.vo.Cat" p:name="Tom"></bean>
+	<bean id="catName"
+		class="org.springframework.beans.factory.config.PropertyPathFactoryBean"
+		p:targetObject-ref="owner" p:propertyPath="cat.name"></bean>
 </beans>

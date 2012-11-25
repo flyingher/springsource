@@ -34,6 +34,12 @@ public class Demo2 {
 	}
 
 	@Test
+	public void test12() {
+		String catName = ctx.getBean("catName", String.class);
+		System.out.println(catName);
+	}
+
+	@Test
 	public void test11() {
 		System.out.println(ctx.getBean("boy", Boy.class).newDog());
 		System.out.println(ctx.getBean("boy", Boy.class).newDog());
