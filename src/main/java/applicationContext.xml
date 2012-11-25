@@ -63,4 +63,5 @@
 		p:fieldName="out" p:className="java.lang.System"></bean>
 	<bean id="ffb" class="com.flyingh.bean.FieldFactoryBean"
 		p:fieldName="str" p:className="com.flyingh.vo.User"></bean>
+	<bean id="myBean" class="com.flyingh.bean.MyBean"></bean>
 </beans>

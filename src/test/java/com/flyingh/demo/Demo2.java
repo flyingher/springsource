@@ -15,6 +15,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.flyingh.bean.FieldFactoryBean;
+import com.flyingh.bean.MyBean;
 import com.flyingh.vo.User;
 
 public class Demo2 {
@@ -27,6 +28,12 @@ public class Demo2 {
 
 	@After
 	public void tearDown() throws Exception {
+	}
+	
+	@Test
+	public void test8(){
+		MyBean myBean = ctx.getBean("myBean", MyBean.class);
+		System.out.println(myBean.getName());
 	}
 
 	@Test
