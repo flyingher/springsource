@@ -33,6 +33,8 @@ public class Demo2 {
 		PrintStream out = ctx.getBean("fieldFactoryBean", PrintStream.class);
 		System.out.println(out);
 		out.println("hello world!!!");
+		String str = ctx.getBean("ffb", String.class);
+		System.out.println(str);
 	}
 
 	@Test

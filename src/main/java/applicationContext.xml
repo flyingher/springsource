@@ -61,4 +61,6 @@
 	<bean id="integerFactoryBean" class="com.flyingh.bean.IntegerFactoryBean"></bean>
 	<bean id="fieldFactoryBean" class="com.flyingh.bean.FieldFactoryBean"
 		p:fieldName="out" p:className="java.lang.System"></bean>
+	<bean id="ffb" class="com.flyingh.bean.FieldFactoryBean"
+		p:fieldName="str" p:className="com.flyingh.vo.User"></bean>
 </beans>

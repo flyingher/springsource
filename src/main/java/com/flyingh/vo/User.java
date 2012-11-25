@@ -16,6 +16,7 @@ public class User {
 	private Map<String, Integer> map;
 	private Properties properties;
 	private String[] strs;
+	private static String str = "test";
 
 	public User() {
 		super();
@@ -103,6 +104,11 @@ public class User {
 	public void setInfo(String name, String password) {
 		this.name = name;
 		this.password = password;
+	}
+
+	@SuppressWarnings("unused")
+	private void printStr() {
+		System.out.println(str);
 	}
 
 }

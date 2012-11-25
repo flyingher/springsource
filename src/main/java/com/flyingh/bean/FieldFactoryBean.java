@@ -10,7 +10,7 @@ public class FieldFactoryBean implements FactoryBean<Object> {
 
 	public Object getObject() throws Exception {
 		Class<?> cls = Class.forName(className);
-		Field field = cls.getField(fieldName);
+		Field field = cls.getDeclaredField(fieldName);
 		field.setAccessible(true);
 		return field.get(cls);
 	}
