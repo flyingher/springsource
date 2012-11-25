@@ -56,4 +56,5 @@
 		<constructor-arg value="xiangjiaApple"></constructor-arg>
 		<constructor-arg value="100"></constructor-arg>
 	</bean>
+	<bean id="factoryBean" class="com.flyingh.bean.UserFactoryBean"></bean>
 </beans>

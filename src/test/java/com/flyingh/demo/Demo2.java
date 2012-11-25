@@ -5,6 +5,8 @@ import java.util.Map.Entry;
 
 import javax.swing.JFrame;
 
+import junit.framework.Assert;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -24,10 +26,17 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
-	
+
 	@Test
-	public void test4(){
-		
+	public void test5() {
+		User user1 = ctx.getBean("factoryBean", User.class);
+		User user2 = ctx.getBean("factoryBean", User.class);
+		Assert.assertSame(user1, user2);
+	}
+
+	@Test
+	public void test4() {
+
 	}
 
 	@Test
