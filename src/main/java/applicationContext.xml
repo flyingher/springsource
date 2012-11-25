@@ -64,4 +64,6 @@
 	<bean id="ffb" class="com.flyingh.bean.FieldFactoryBean"
 		p:fieldName="str" p:className="com.flyingh.vo.User"></bean>
 	<bean id="myBean" class="com.flyingh.bean.MyBean"></bean>
+	<bean id="orange" class="com.flyingh.vo.Orange" init-method="init"
+		destroy-method="destroy" p:name="orange's name"></bean>
 </beans>

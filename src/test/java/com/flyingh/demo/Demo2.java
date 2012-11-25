@@ -29,6 +29,9 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
+	@Test
+	public void test9(){
+	}
 	
 	@Test
 	public void test8(){
