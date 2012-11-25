@@ -83,4 +83,7 @@
 		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
 		p:targetObject-ref="banana" p:targetField="name"></bean>
 	<bean id="banana" class="com.flyingh.vo.Banana" p:name="banana"></bean>
+	<bean id="pi"
+		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
+		p:targetClass="java.lang.Math" p:targetField="PI"></bean>
 </beans>
