@@ -36,6 +36,8 @@ public class Demo2 {
 	public void test10() {
 		System.out.println(ctx.getBean("driver", Driver.class).getCar());
 		System.out.println(ctx.getBean("driver", Driver.class).getCar());
+		System.out.println(ctx.getBean("car"));
+		System.out.println(ctx.getBean("car"));
 	}
 
 	@Test
