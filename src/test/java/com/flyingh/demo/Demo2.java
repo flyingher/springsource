@@ -31,6 +31,7 @@ public class Demo2 {
 	public void test5() {
 		User user1 = ctx.getBean("factoryBean", User.class);
 		User user2 = ctx.getBean("factoryBean", User.class);
+		System.out.println(user1);
 		Assert.assertSame(user1, user2);
 	}
 
