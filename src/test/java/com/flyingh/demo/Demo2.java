@@ -24,6 +24,11 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
+	
+	@Test
+	public void test4(){
+		
+	}
 
 	@Test
 	public void test3() {
