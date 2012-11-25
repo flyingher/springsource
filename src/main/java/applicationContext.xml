@@ -114,4 +114,20 @@
 			</list>
 		</property>
 	</bean>
+	<bean
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+		p:targetObject-ref="contentPane" p:targetMethod="setBackground">
+		<property name="arguments">
+			<list>
+				<bean
+					class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
+					p:staticField="java.awt.Color.GREEN"></bean>
+			</list>
+		</property>
+	</bean>
+	<bean id="contentPane"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+		p:targetObject-ref="frame" p:targetMethod="getContentPane">
+	</bean>
+	<bean id="frame" class="javax.swing.JFrame"></bean>
 </beans>

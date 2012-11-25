@@ -34,6 +34,15 @@ public class Demo2 {
 	}
 
 	@Test
+	public void test15() throws InterruptedException {
+		JFrame frame = ctx.getBean("frame", JFrame.class);
+		frame.setBounds(300, 200, 500, 300);
+		frame.setTitle("setBackground test");
+		frame.setVisible(true);
+		Thread.sleep(5000);
+	}
+
+	@Test
 	public void test14() {
 		System.out.println(ctx.getBean("info"));
 		System.out.println(ctx.getBean("name", String.class));
