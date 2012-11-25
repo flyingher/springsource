@@ -1,9 +1,14 @@
 package com.flyingh.vo;
 
+import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
-public class Orange implements InitializingBean, DisposableBean {
+public class Orange implements InitializingBean, DisposableBean,
+		ApplicationContextAware, BeanNameAware {
 	private String name;
 
 	public Orange() {
@@ -22,19 +27,28 @@ public class Orange implements InitializingBean, DisposableBean {
 
 	@SuppressWarnings("unused")
 	private void init() {
-		System.out.println("4.Orange.init()");
+		System.out.println("6.Orange.init()");
 	}
 
 	@SuppressWarnings("unused")
 	private void close() {
-		System.out.println("6.Orange.close()");
+		System.out.println("8.Orange.close()");
 	}
 
 	public void destroy() throws Exception {
-		System.out.println("5.Orange.destroy()");
+		System.out.println("7.Orange.destroy()");
 	}
 
 	public void afterPropertiesSet() throws Exception {
-		System.out.println("3.Orange.afterPropertiesSet()");
+		System.out.println("5.Orange.afterPropertiesSet()");
+	}
+
+	public void setApplicationContext(ApplicationContext applicationContext)
+			throws BeansException {
+		System.out.println("4.Orange.setApplicationContext()");
+	}
+
+	public void setBeanName(String name) {
+		System.out.println("3.Orange.setBeanName()");
 	}
 }
