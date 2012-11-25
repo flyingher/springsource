@@ -6,7 +6,7 @@
 	<bean id="service" class="com.flyingh.service.impl.UserServiceImpl">
 		<property name="dao" ref="dao"></property>
 	</bean>
-	<bean id="person" class="com.flyingh.vo.Person" abstract="true">
+	<bean id="person" abstract="true">
 		<property name="id" value="1"></property>
 		<property name="name" value="flyingh"></property>
 		<property name="age" value="22"></property>
