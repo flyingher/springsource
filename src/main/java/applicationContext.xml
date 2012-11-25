@@ -79,4 +79,8 @@
 		p:targetObject-ref="owner" p:propertyPath="cat.name"></bean>
 	<bean id="owner.cat.name"
 		class="org.springframework.beans.factory.config.PropertyPathFactoryBean"></bean>
+	<bean id="bananaName"
+		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
+		p:targetObject-ref="banana" p:targetField="name"></bean>
+	<bean id="banana" class="com.flyingh.vo.Banana" p:name="banana"></bean>
 </beans>
