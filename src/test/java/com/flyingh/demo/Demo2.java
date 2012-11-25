@@ -17,6 +17,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.flyingh.bean.FieldFactoryBean;
 import com.flyingh.bean.MyBean;
+import com.flyingh.vo.Driver;
 import com.flyingh.vo.User;
 
 public class Demo2 {
@@ -29,6 +30,12 @@ public class Demo2 {
 
 	@After
 	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test10() {
+		System.out.println(ctx.getBean("driver", Driver.class).getCar());
+		System.out.println(ctx.getBean("driver", Driver.class).getCar());
 	}
 
 	@Test

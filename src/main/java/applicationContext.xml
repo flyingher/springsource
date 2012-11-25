@@ -66,4 +66,7 @@
 	<bean id="myBean" class="com.flyingh.bean.MyBean"></bean>
 	<bean id="orange" class="com.flyingh.vo.Orange" init-method="init"
 		destroy-method="close" p:name="orange's name"></bean>
+	<bean id="car" class="com.flyingh.vo.Car" p:name="BMW" scope="prototype"></bean>
+	<bean id="driver" class="com.flyingh.vo.Driver" p:name="Jim"
+		p:car-ref="car"></bean>
 </beans>
