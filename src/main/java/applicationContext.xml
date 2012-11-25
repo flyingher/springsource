@@ -86,4 +86,7 @@
 	<bean id="pi"
 		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
 		p:targetClass="java.lang.Math" p:targetField="PI"></bean>
+	<bean id="e"
+		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
+		p:staticField="java.lang.Math.E"></bean>
 </beans>

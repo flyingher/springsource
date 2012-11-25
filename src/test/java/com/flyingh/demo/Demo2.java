@@ -37,6 +37,7 @@ public class Demo2 {
 	public void test13() {
 		System.out.println(ctx.getBean("bananaName", String.class));
 		System.out.println(ctx.getBean("pi", Double.class));
+		System.out.println(ctx.getBean("e", Double.class));
 	}
 
 	@Test
