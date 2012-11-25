@@ -8,6 +8,11 @@ public class AppleFactory {
 		return new Apple();
 	}
 
+	public static Apple getApple(String name, float weight) {
+		System.out.println("AppleFactory.getApple()");
+		return new Apple(name, weight);
+	}
+
 	public Apple getInstance() {
 		System.out.println("AppleFactory.getInstance()");
 		return new Apple();

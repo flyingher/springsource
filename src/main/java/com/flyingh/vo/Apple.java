@@ -8,6 +8,11 @@ public class Apple {
 		System.out.println("Apple.Apple()");
 	}
 
+	public Apple(String name, float weight) {
+		this.name = name;
+		this.weight = weight;
+	}
+
 	public String getName() {
 		return name;
 	}

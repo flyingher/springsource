@@ -49,6 +49,11 @@
 	<!-- <bean id="apple" class="com.flyingh.vo.Apple"></bean> -->
 	<!-- <bean id="apple" class="com.flyingh.factory.AppleFactory" -->
 	<!-- factory-method="newInstance"></bean> -->
-	<bean id="factory" class="com.flyingh.factory.AppleFactory"></bean>
-	<bean id="apple" factory-bean="factory" factory-method="getInstance"></bean>
+	<!-- <bean id="factory" class="com.flyingh.factory.AppleFactory"></bean> -->
+	<!-- <bean id="apple" factory-bean="factory" factory-method="getInstance"></bean> -->
+	<bean id="apple" class="com.flyingh.factory.AppleFactory"
+		factory-method="getApple">
+		<constructor-arg value="xiangjiaApple"></constructor-arg>
+		<constructor-arg value="100"></constructor-arg>
+	</bean>
 </beans>
