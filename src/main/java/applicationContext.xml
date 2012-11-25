@@ -89,4 +89,11 @@
 	<bean id="e"
 		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
 		p:staticField="java.lang.Math.E"></bean>
+	<bean id="info"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+		p:targetObject-ref="desk" p:targetMethod="info"></bean>
+	<bean id="desk" class="com.flyingh.vo.Desk" p:name="computer desk"></bean>
+	<bean id="name"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+		p:targetObject-ref="desk" p:targetMethod="getName"></bean>
 </beans>
