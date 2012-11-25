@@ -37,6 +37,7 @@ public class Demo2 {
 	public void test12() {
 		String catName = ctx.getBean("catName", String.class);
 		System.out.println(catName);
+		System.out.println(ctx.getBean("owner.cat.name", String.class));
 	}
 
 	@Test

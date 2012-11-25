@@ -77,4 +77,6 @@
 	<bean id="catName"
 		class="org.springframework.beans.factory.config.PropertyPathFactoryBean"
 		p:targetObject-ref="owner" p:propertyPath="cat.name"></bean>
+	<bean id="owner.cat.name"
+		class="org.springframework.beans.factory.config.PropertyPathFactoryBean"></bean>
 </beans>
