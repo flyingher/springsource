@@ -28,6 +28,18 @@ public class Demo2 {
 	}
 
 	@Test
+	public void test6() {
+		String str1 = ctx.getBean("stringFactoryBean", String.class);
+		String str2 = ctx.getBean("stringFactoryBean", String.class);
+		System.out.println(str1 == str2);
+		Assert.assertSame(str1, str2);
+		Integer integer1 = ctx.getBean("integerFactoryBean", Integer.class);
+		Integer integer2 = ctx.getBean("integerFactoryBean", Integer.class);
+		System.out.println(integer1 == integer2);
+		Assert.assertSame(integer1, integer2);
+	}
+
+	@Test
 	public void test5() {
 		User user1 = ctx.getBean("factoryBean", User.class);
 		User user2 = ctx.getBean("factoryBean", User.class);

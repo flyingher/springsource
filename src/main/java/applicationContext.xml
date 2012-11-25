@@ -57,4 +57,6 @@
 		<constructor-arg value="100"></constructor-arg>
 	</bean>
 	<bean id="factoryBean" class="com.flyingh.bean.UserFactoryBean"></bean>
+	<bean id="stringFactoryBean" class="com.flyingh.bean.StringFactoryBean"></bean>
+	<bean id="integerFactoryBean" class="com.flyingh.bean.IntegerFactoryBean"></bean>
 </beans>
