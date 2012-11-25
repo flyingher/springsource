@@ -1,5 +1,6 @@
 package com.flyingh.demo;
 
+import java.io.PrintStream;
 import java.util.Map;
 import java.util.Map.Entry;
 
@@ -25,6 +26,13 @@ public class Demo2 {
 
 	@After
 	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test7() {
+		PrintStream out = ctx.getBean("fieldFactoryBean", PrintStream.class);
+		System.out.println(out);
+		out.println("hello world!!!");
 	}
 
 	@Test

@@ -59,4 +59,6 @@
 	<bean id="factoryBean" class="com.flyingh.bean.UserFactoryBean"></bean>
 	<bean id="stringFactoryBean" class="com.flyingh.bean.StringFactoryBean"></bean>
 	<bean id="integerFactoryBean" class="com.flyingh.bean.IntegerFactoryBean"></bean>
+	<bean id="fieldFactoryBean" class="com.flyingh.bean.FieldFactoryBean"
+		p:fieldName="out" p:className="java.lang.System"></bean>
 </beans>
