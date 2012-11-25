@@ -15,7 +15,7 @@ public class UserFactoryBean implements FactoryBean<User> {
 	}
 
 	public boolean isSingleton() {
-		return true;
+		return false;
 	}
 
 }
