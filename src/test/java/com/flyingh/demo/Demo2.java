@@ -12,6 +12,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.AbstractApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import com.flyingh.bean.FieldFactoryBean;
@@ -29,12 +30,14 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
+
 	@Test
-	public void test9(){
+	public void test9() {
+		((AbstractApplicationContext) ctx).registerShutdownHook();
 	}
-	
+
 	@Test
-	public void test8(){
+	public void test8() {
 		MyBean myBean = ctx.getBean("myBean", MyBean.class);
 		System.out.println(myBean.getName());
 	}
