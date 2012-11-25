@@ -6,7 +6,6 @@ import org.springframework.context.ApplicationContextAware;
 
 public class Driver implements ApplicationContextAware {
 	private String name;
-	private Car car;
 	private ApplicationContext ctx;
 
 	public String getName() {
@@ -18,16 +17,11 @@ public class Driver implements ApplicationContextAware {
 	}
 
 	public Car getCar() {
-		car = ctx.getBean("car", Car.class);
-		return car;
-	}
-
-	public void setCar(Car car) {
-		this.car = car;
+		return ctx.getBean("car", Car.class);
 	}
 
 	public void setApplicationContext(ApplicationContext applicationContext)
 			throws BeansException {
-		this.ctx = applicationContext;
+		ctx = applicationContext;
 	}
 }
