@@ -44,6 +44,7 @@ public class Demo2 {
 		User user1 = ctx.getBean("factoryBean", User.class);
 		User user2 = ctx.getBean("factoryBean", User.class);
 		System.out.println(user1);
+		System.out.println(user2);
 		Assert.assertNotSame(user1, user2);
 	}
 
