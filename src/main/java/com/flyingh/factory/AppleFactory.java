@@ -10,6 +10,7 @@ public class AppleFactory {
 
 	public static Apple getApple(String name, float weight) {
 		System.out.println("AppleFactory.getApple()");
+		System.out.println(name + "-->" + weight);
 		return new Apple(name, weight);
 	}
 
