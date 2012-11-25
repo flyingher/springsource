@@ -7,4 +7,9 @@ public class AppleFactory {
 		System.out.println("AppleFactory.newInstance()");
 		return new Apple();
 	}
+
+	public Apple getInstance() {
+		System.out.println("AppleFactory.getInstance()");
+		return new Apple();
+	}
 }
