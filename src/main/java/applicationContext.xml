@@ -46,5 +46,7 @@
 			</list>
 		</property>
 	</bean>
-	<bean id="apple" class="com.flyingh.vo.Apple"></bean>
+	<!-- <bean id="apple" class="com.flyingh.vo.Apple"></bean> -->
+	<bean id="apple" class="com.flyingh.factory.AppleFactory"
+		factory-method="newInstance"></bean>
 </beans>
