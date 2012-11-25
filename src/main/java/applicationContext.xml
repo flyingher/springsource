@@ -68,4 +68,8 @@
 		destroy-method="close" p:name="orange's name"></bean>
 	<bean id="car" class="com.flyingh.vo.Car" p:name="BMW" scope="prototype"></bean>
 	<bean id="driver" class="com.flyingh.vo.Driver" p:name="Jim"></bean>
+	<bean id="boy" class="com.flyingh.vo.Boy">
+		<lookup-method name="newDog" bean="dog" />
+	</bean>
+	<bean id="dog" class="com.flyingh.vo.Dog" scope="prototype"></bean>
 </beans>
