@@ -7,6 +7,10 @@ public class Desk {
 		System.out.println("the desk's name is " + name + "!");
 	}
 
+	public static String sayHello(String name) {
+		return name + ",Hello World!!!";
+	}
+
 	public String getName() {
 		return name;
 	}

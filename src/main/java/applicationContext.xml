@@ -96,4 +96,13 @@
 	<bean id="name"
 		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
 		p:targetObject-ref="desk" p:targetMethod="getName"></bean>
+	<bean id="hello"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+		p:targetClass="com.flyingh.vo.Desk" p:targetMethod="sayHello">
+		<property name="arguments">
+			<list>
+				<value>flyingh</value>
+			</list>
+		</property>
+	</bean>
 </beans>

@@ -37,6 +37,7 @@ public class Demo2 {
 	public void test14() {
 		System.out.println(ctx.getBean("info"));
 		System.out.println(ctx.getBean("name", String.class));
+		System.out.println(ctx.getBean("hello", String.class));
 	}
 
 	@Test
