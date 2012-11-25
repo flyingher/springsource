@@ -105,4 +105,13 @@
 			</list>
 		</property>
 	</bean>
+	<bean id="hi"
+		class="org.springframework.beans.factory.config.MethodInvokingFactoryBean"
+		p:staticMethod="com.flyingh.vo.Desk.sayHello">
+		<property name="arguments">
+			<list>
+				<value>haha</value>
+			</list>
+		</property>
+	</bean>
 </beans>
