@@ -81,8 +81,9 @@
 		p:targetObject-ref="owner" p:propertyPath="cat.name"></bean>
 	<bean id="owner.cat.name"
 		class="org.springframework.beans.factory.config.PropertyPathFactoryBean"></bean>
-		
+
 	<util:constant id="err" static-field="java.lang.System.err" />
+	<util:property-path id="catName2" path="owner.cat.name" />
 	
 	<bean id="bananaName"
 		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"

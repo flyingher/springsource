@@ -32,9 +32,11 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
+
 	@Test
-	public void test16(){
+	public void test16() {
 		System.out.println(ctx.getBean("err", PrintStream.class));
+		System.out.println(ctx.getBean("catName2", String.class));
 	}
 
 	@Test
