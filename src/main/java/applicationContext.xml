@@ -106,6 +106,8 @@
 	</util:properties>
 	<util:properties id="messages"
 		location="classpath:messages_en_US.properties"></util:properties>
+	<bean id="girl" class="com.flyingh.vo.Girl" p:book="#{new com.flyingh.vo.Book('java')}"
+		p:pencil="#{new com.flyingh.vo.Pencil('red')}" p:list="#{{'first','second','third'}}"></bean>
 
 
 	<bean id="bananaName"
