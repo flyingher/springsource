@@ -84,7 +84,28 @@
 
 	<util:constant id="err" static-field="java.lang.System.err" />
 	<util:property-path id="catName2" path="owner.cat.name" />
-	
+	<util:list id="list">
+		<value>haha</value>
+		<value>hehe</value>
+		<value>xixi</value>
+	</util:list>
+	<util:set id="set">
+		<value>a</value>
+		<value>b</value>
+		<value>c</value>
+	</util:set>
+	<util:map id="map">
+		<entry key="a" value="1"></entry>
+		<entry key="b" value="2"></entry>
+		<entry key="c" value="3"></entry>
+	</util:map>
+	<util:properties id="properties">
+		<prop key="first">1</prop>
+		<prop key="second">2</prop>
+		<prop key="third">3</prop>
+	</util:properties>
+
+
 	<bean id="bananaName"
 		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
 		p:targetObject-ref="banana" p:targetField="name"></bean>

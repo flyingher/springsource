@@ -1,8 +1,11 @@
 package com.flyingh.demo;
 
 import java.io.PrintStream;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.Properties;
+import java.util.Set;
 
 import javax.swing.JFrame;
 
@@ -37,6 +40,14 @@ public class Demo2 {
 	public void test16() {
 		System.out.println(ctx.getBean("err", PrintStream.class));
 		System.out.println(ctx.getBean("catName2", String.class));
+		System.out.println(ctx.getBean("list", List.class));
+		System.out.println(ctx.getBean("list", List.class).getClass());
+		System.out.println(ctx.getBean("set", Set.class));
+		System.out.println(ctx.getBean("set", Set.class).getClass());
+		System.out.println(ctx.getBean("map", Map.class));
+		System.out.println(ctx.getBean("map", Map.class).getClass());
+		System.out.println(ctx.getBean("properties", Properties.class));
+		System.out.println(ctx.getBean("properties", Properties.class).getClass());
 	}
 
 	@Test
