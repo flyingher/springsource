@@ -104,6 +104,8 @@
 		<prop key="second">2</prop>
 		<prop key="third">3</prop>
 	</util:properties>
+	<util:properties id="messages"
+		location="classpath:messages_en_US.properties"></util:properties>
 
 
 	<bean id="bananaName"

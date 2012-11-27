@@ -47,7 +47,11 @@ public class Demo2 {
 		System.out.println(ctx.getBean("map", Map.class));
 		System.out.println(ctx.getBean("map", Map.class).getClass());
 		System.out.println(ctx.getBean("properties", Properties.class));
-		System.out.println(ctx.getBean("properties", Properties.class).getClass());
+		System.out.println(ctx.getBean("properties", Properties.class)
+				.getClass());
+		System.out.println(ctx.getBean("messages", Properties.class));
+		System.out
+				.println(ctx.getBean("messages", Properties.class).getClass());
 	}
 
 	@Test
