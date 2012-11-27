@@ -32,6 +32,10 @@ public class Demo2 {
 	@After
 	public void tearDown() throws Exception {
 	}
+	@Test
+	public void test16(){
+		System.out.println(ctx.getBean("err", PrintStream.class));
+	}
 
 	@Test
 	public void test15() throws InterruptedException {

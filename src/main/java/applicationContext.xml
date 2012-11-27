@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
-	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 	<bean id="jFrame" class="javax.swing.JFrame" p:title="my title"
 		p:visible="true" p:size-ref="dimension"></bean>
 	<bean id="dimension" class="java.awt.Dimension">
@@ -79,6 +81,9 @@
 		p:targetObject-ref="owner" p:propertyPath="cat.name"></bean>
 	<bean id="owner.cat.name"
 		class="org.springframework.beans.factory.config.PropertyPathFactoryBean"></bean>
+		
+	<util:constant id="err" static-field="java.lang.System.err" />
+	
 	<bean id="bananaName"
 		class="org.springframework.beans.factory.config.FieldRetrievingFactoryBean"
 		p:targetObject-ref="banana" p:targetField="name"></bean>
