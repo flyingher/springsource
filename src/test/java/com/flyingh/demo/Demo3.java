@@ -23,6 +23,14 @@ public class Demo3 {
 	}
 
 	@Test
+	public void test3() {
+		System.out.println(parser.parseExpression("{'a','b','c','d','e'}")
+				.getValue());
+		System.out.println(parser.parseExpression("{'a','b','c','d','e'}")
+				.getValue().getClass());
+	}
+
+	@Test
 	public void test2() {
 		int[] value = (int[]) parser.parseExpression("new int[]{1,2,3,4,5}")
 				.getValue();
