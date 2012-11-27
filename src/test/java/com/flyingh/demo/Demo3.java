@@ -2,6 +2,8 @@ package com.flyingh.demo;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.Arrays;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,6 +20,13 @@ public class Demo3 {
 
 	@After
 	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test2() {
+		int[] value = (int[]) parser.parseExpression("new int[]{1,2,3,4,5}")
+				.getValue();
+		System.out.println(Arrays.toString(value));
 	}
 
 	@Test
