@@ -5,6 +5,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
+	<bean id="orange" class="com.flyingh.vo.Orange" init-method="init"
+		destroy-method="close" p:name="orange's name"></bean>
 	<context:component-scan base-package="com.flyingh.*"></context:component-scan>
 
 </beans>
