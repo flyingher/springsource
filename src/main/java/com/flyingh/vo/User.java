@@ -6,6 +6,9 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class User {
 	private int id;
 	private String name;
