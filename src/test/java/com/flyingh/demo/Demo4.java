@@ -29,13 +29,16 @@ public class Demo4 {
 
 	@Test
 	public void test3() throws SQLException {
-		DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
-		System.out.println(dataSource);
-		System.out.println(dataSource.getConnection());
+		System.out.println(ctx.getBean("dataSource", DataSource.class));
+		System.out.println(ctx.getBean("dataSource", DataSource.class)
+				.getConnection());
 		System.out.println("*****************");
-		DataSource ds = ctx.getBean("ds", DataSource.class);
-		System.out.println(ds);
-		System.out.println(ds.getConnection());
+		System.out.println(ctx.getBean("ds", DataSource.class));
+		System.out.println(ctx.getBean("ds", DataSource.class).getConnection());
+		System.out.println("*****************");
+		System.out.println(ctx.getBean("ds2", DataSource.class));
+		System.out
+				.println(ctx.getBean("ds2", DataSource.class).getConnection());
 	}
 
 	@Test

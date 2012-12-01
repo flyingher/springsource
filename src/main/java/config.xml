@@ -19,7 +19,10 @@
 		p:username="${username}" p:password="${password}" p:driverClassName="${driverClassName}"
 		p:url="${url}" p:initialSize="${initialSize}" p:minIdle="${minIdle}"
 		p:maxActive="${maxActive}" p:maxIdle="${maxIdle}"></bean>
-
+	<bean
+		class="org.springframework.beans.factory.config.PropertyOverrideConfigurer"
+		p:location="jdbc2.properties"></bean>
+	<bean id="ds2" class="org.apache.commons.dbcp.BasicDataSource"></bean>
 	<context:component-scan base-package="com.flyingh.*"></context:component-scan>
 
 </beans>
