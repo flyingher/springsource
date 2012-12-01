@@ -4,12 +4,15 @@ import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.beans.factory.config.BeanFactoryPostProcessor;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.beans.factory.config.ConfigurableListableBeanFactory;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 
 public class Orange implements InitializingBean, DisposableBean,
-		ApplicationContextAware, BeanNameAware, BeanPostProcessor {
+		ApplicationContextAware, BeanNameAware, BeanPostProcessor,
+		BeanFactoryPostProcessor {
 	private String name;
 
 	public Orange() {
@@ -64,5 +67,10 @@ public class Orange implements InitializingBean, DisposableBean,
 			throws BeansException {
 		System.out.println("Orange.postProcessAfterInitialization()");
 		return null;
+	}
+
+	public void postProcessBeanFactory(
+			ConfigurableListableBeanFactory beanFactory) throws BeansException {
+		System.out.println("Orange.postProcessBeanFactory()");
 	}
 }
