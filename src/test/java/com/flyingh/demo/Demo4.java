@@ -32,6 +32,10 @@ public class Demo4 {
 		DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
 		System.out.println(dataSource);
 		System.out.println(dataSource.getConnection());
+		System.out.println("*****************");
+		DataSource ds = ctx.getBean("ds", DataSource.class);
+		System.out.println(ds);
+		System.out.println(ds.getConnection());
 	}
 
 	@Test
