@@ -7,6 +7,11 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 	<bean id="orange" class="com.flyingh.vo.Orange" init-method="init"
 		destroy-method="close" p:name="orange's name"></bean>
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		p:username="root" p:password="passwd" p:driverClassName="com.mysql.jdbc.Driver"
+		p:url="jdbc:mysql://localhost:3306/spring" p:initialSize="3"
+		p:minIdle="1" p:maxActive="500" p:maxIdle="10"></bean>
+
 	<context:component-scan base-package="com.flyingh.*"></context:component-scan>
 
 </beans>

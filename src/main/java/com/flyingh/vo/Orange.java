@@ -66,7 +66,7 @@ public class Orange implements InitializingBean, DisposableBean,
 	public Object postProcessAfterInitialization(Object bean, String beanName)
 			throws BeansException {
 		System.out.println("Orange.postProcessAfterInitialization()");
-		return null;
+		return bean;
 	}
 
 	public void postProcessBeanFactory(

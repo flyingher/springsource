@@ -1,5 +1,9 @@
 package com.flyingh.demo;
 
+import java.sql.SQLException;
+
+import javax.sql.DataSource;
+
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -21,6 +25,13 @@ public class Demo4 {
 
 	@After
 	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void test3() throws SQLException {
+		DataSource dataSource = ctx.getBean("dataSource", DataSource.class);
+		System.out.println(dataSource);
+		System.out.println(dataSource.getConnection());
 	}
 
 	@Test
