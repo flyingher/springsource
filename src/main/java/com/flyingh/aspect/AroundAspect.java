@@ -13,7 +13,6 @@ public class AroundAspect {
 		System.out.println(joinPoint.getThis().getClass());
 		System.out.println(joinPoint.getTarget());
 		System.out.println(joinPoint.getTarget().getClass());
-		Object obj = joinPoint.proceed();
-		return obj + " world!!!";
+		return joinPoint.proceed() + " world!!!";
 	}
 }
