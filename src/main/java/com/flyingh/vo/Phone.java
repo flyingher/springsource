@@ -8,4 +8,8 @@ public class Phone {
 	public void sendMsg() {
 		System.out.println("Phone.sendMsg()");
 	}
+
+	public void throwException() throws Exception {
+		throw new Exception();
+	}
 }

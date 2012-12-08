@@ -11,6 +11,7 @@
 	<bean id="phone" class="com.flyingh.vo.Phone"></bean>
 	<bean id="phoneAspect" class="com.flyingh.aspect.PhoneAspect"></bean>
 	<bean id="logAspect" class="com.flyingh.aspect.LogAspect"></bean>
+	<bean id="exceptionAspect" class="com.flyingh.aspect.ExceptionAspect"></bean>
 	<aop:config>
 		<aop:pointcut expression="execution(* com.flyingh.vo.Phone.*(..))"
 			id="pt" />
@@ -19,6 +20,10 @@
 		</aop:aspect>
 		<aop:aspect ref="logAspect">
 			<aop:after method="log" pointcut-ref="pt" />
+		</aop:aspect>
+		<aop:aspect ref="exceptionAspect">
+			<aop:after-throwing method="handleException"
+				pointcut-ref="pt" />
 		</aop:aspect>
 	</aop:config>
 </beans>

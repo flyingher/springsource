@@ -25,6 +25,11 @@ public class Demo5 {
 		Phone phone = ctx.getBean("phone", Phone.class);
 		phone.sendMsg();
 		phone.dial();
+		try {
+			phone.throwException();
+		} catch (Exception e) {
+			System.out.println(e);
+		}
 	}
 
 }
