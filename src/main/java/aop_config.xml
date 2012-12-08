@@ -8,6 +8,13 @@
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd
 		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.1.xsd
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
-
-
+	<bean id="phone" class="com.flyingh.vo.Phone"></bean>
+	<bean id="phoneAspect" class="com.flyingh.aspect.PhoneAspect"></bean>
+	<aop:config>
+		<aop:aspect ref="phoneAspect">
+			<aop:pointcut expression="execution(* com.flyingh.vo.Phone.*(..))"
+				id="pt" />
+			<aop:before method="before" pointcut-ref="pt" />
+		</aop:aspect>
+	</aop:config>
 </beans>
