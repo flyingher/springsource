@@ -12,4 +12,8 @@ public class Phone {
 	public void throwException() throws Exception {
 		throw new Exception();
 	}
+
+	public String sayHello() {
+		return "Hello!";
+	}
 }
