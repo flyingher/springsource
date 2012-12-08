@@ -13,7 +13,7 @@ public class Phone {
 		throw new Exception();
 	}
 
-	public String sayHello() {
-		return "Hello!";
+	public String sayHello(String name) {
+		return name + ",Hello!";
 	}
 }

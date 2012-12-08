@@ -13,6 +13,7 @@
 	<bean id="logAspect" class="com.flyingh.aspect.LogAspect"></bean>
 	<bean id="exceptionAspect" class="com.flyingh.aspect.ExceptionAspect"></bean>
 	<bean id="afterReturingAspect" class="com.flyingh.aspect.AfterReturingAspect"></bean>
+	<bean id="aroundAspect" class="com.flyingh.aspect.AroundAspect"></bean>
 	<aop:config>
 		<aop:pointcut expression="execution(* com.flyingh.vo.Phone.*(..))"
 			id="pt" />
@@ -29,6 +30,9 @@
 		<aop:aspect ref="afterReturingAspect">
 			<aop:after-returning method="afterReturing"
 				pointcut="execution(String com.flyingh.vo.Phone.*(..))" returning="result" />
+		</aop:aspect>
+		<aop:aspect ref="aroundAspect">
+			<aop:around method="around" pointcut-ref="pt" />
 		</aop:aspect>
 	</aop:config>
 </beans>

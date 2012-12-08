@@ -30,7 +30,7 @@ public class Demo5 {
 		} catch (Exception e) {
 			System.out.println(e);
 		}
-		phone.sayHello();
+		phone.sayHello("flyingh");
 	}
 
 }
