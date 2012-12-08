@@ -23,7 +23,7 @@
 		</aop:aspect>
 		<aop:aspect ref="exceptionAspect">
 			<aop:after-throwing method="handleException"
-				pointcut-ref="pt" />
+				pointcut-ref="pt" throwing="e" />
 		</aop:aspect>
 	</aop:config>
 </beans>
