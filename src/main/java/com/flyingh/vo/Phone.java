@@ -14,6 +14,6 @@ public class Phone {
 	}
 
 	public String sayHello(String name) {
-		return name + ",Hello!";
+		return name + ",Hello";
 	}
 }
