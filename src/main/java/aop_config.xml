@@ -10,11 +10,19 @@
 		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.1.xsd">
 	<bean id="phone" class="com.flyingh.vo.Phone"></bean>
 	<bean id="phoneAspect" class="com.flyingh.aspect.PhoneAspect"></bean>
+	<bean id="logAspect" class="com.flyingh.aspect.LogAspect"></bean>
 	<aop:config>
 		<aop:aspect ref="phoneAspect">
 			<aop:pointcut expression="execution(* com.flyingh.vo.Phone.*(..))"
 				id="pt" />
 			<aop:before method="before" pointcut-ref="pt" />
+		</aop:aspect>
+	</aop:config>
+	<aop:config>
+		<aop:pointcut expression="execution(* com.flyingh.vo.Phone.*(..))"
+			id="pt" />
+		<aop:aspect ref="logAspect">
+			<aop:before method="log" pointcut-ref="pt" />
 		</aop:aspect>
 	</aop:config>
 </beans>
