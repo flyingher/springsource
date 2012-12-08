@@ -10,6 +10,7 @@
 		<config>src/main/java/beans.xml</config>
 		<config>src/main/java/applicationContext.xml</config>
 		<config>src/main/java/config.xml</config>
+		<config>src/main/java/aop_config.xml</config>
 	</configs>
 	<configSets>
 	</configSets>
